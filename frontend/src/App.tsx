@@ -182,7 +182,7 @@ function App() {
                 className="pagination-arrow"
                 title="Página anterior"
               >
-                <img src="/chevron.svg" alt="" style={{ transform: 'rotate(90deg)', width: '12px', height: '12px' }} />
+                <img src="/chevron.svg" alt="" style={{ transform: 'rotate(180deg)', width: '12px', height: '12px' }} />
               </button>
               
               {[...Array(Math.min(totalPages, 5))].map((_, i) => {
@@ -214,7 +214,7 @@ function App() {
                 className="pagination-arrow"
                 title="Próxima página"
               >
-                <img src="/chevron.svg" alt="" style={{ transform: 'rotate(-90deg)', width: '12px', height: '12px' }} />
+                <img src="/chevron.svg" alt="" style={{ transform: 'rotate(0deg)', width: '12px', height: '12px' }} />
               </button>
               
               <button
