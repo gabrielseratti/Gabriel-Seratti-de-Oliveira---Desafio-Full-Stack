@@ -16,7 +16,6 @@ const FilterForm = ({ onFilter }: FilterFormProps) => {
   const [startDate, setStartDate] = useState('');
   const [endDate, setEndDate] = useState('');
 
-  // Aplicar filtros automaticamente quando algo mudar
   useEffect(() => {
     onFilter({
       site: site || undefined,
@@ -36,22 +35,15 @@ const FilterForm = ({ onFilter }: FilterFormProps) => {
 
   return (
     <div className="filter-form">
-      <div className="filter-row">
-        <div className="select-wrapper">
-          <select
-            value={site}
-            onChange={(e) => setSite(e.target.value)}
-            className="filter-select"
-          >
-            <option value="">Selecione um site</option>
-            <option value="Barros">Barros, Reis e Moraes</option>
-            <option value="Carvalho">Carvalho, Martins e Batista</option>
-            <option value="Pereira">Pereira, Reis e Albuquerque</option>
-            <option value="Souza">Souza-Batista</option>
-          </select>
-          <img src="/chevron.svg" alt="" className="select-arrow" />
-        </div>
-
+      <div className="filter-row"> 
+        <input
+          type="text"
+          value={site}
+          onChange={(e) => setSite(e.target.value)}
+          placeholder="Buscar por site..."
+          className="filter-input"
+        />
+ 
         <div className="select-wrapper">
           <select
             value={equipment}
@@ -66,20 +58,24 @@ const FilterForm = ({ onFilter }: FilterFormProps) => {
           <img src="/chevron.svg" alt="" className="select-arrow" />
         </div>
 
-        <button 
-          type="button"
-          className="btn-period"
-          onClick={() => setShowDatePicker(!showDatePicker)}
-        >
-          <img src="/filter.svg" alt="" width="16" height="16" />
-          <span>Filtrar por período</span>
-        </button>
+        <div className="filter-spacer"></div>
 
-        {(site || equipment || startDate || endDate) && (
-          <button type="button" onClick={handleClear} className="btn-clear">
-            Limpar filtros
+        <div className="filter-actions">
+          <button 
+            type="button"
+            className="btn-period"
+            onClick={() => setShowDatePicker(!showDatePicker)}
+          >
+            <img src="/filter.svg" alt="" width="16" height="16" />
+            <span>Filtrar por período</span>
           </button>
-        )}
+
+          {(site || equipment || startDate || endDate) && (
+            <button type="button" onClick={handleClear} className="btn-clear">
+              Limpar filtros
+            </button>
+          )}
+        </div>
       </div>
 
       {showDatePicker && (

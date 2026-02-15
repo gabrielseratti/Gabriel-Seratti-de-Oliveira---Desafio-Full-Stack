@@ -15,36 +15,32 @@ export interface NotesFilters {
   startDate?: string;
   endDate?: string;
   page?: number;
+  per_page?: number;
 }
 
-export const notesApi = {
-  // Listar notas com filtros
+export const notesApi = { 
   getNotes: async (filters?: NotesFilters): Promise<PaginatedResponse> => {
     const response = await api.get<PaginatedResponse>('/notes', {
       params: filters,
     });
     return response.data;
   },
-
-  // Criar nova nota
+ 
   createNote: async (note: Omit<Note, 'id' | 'created_at' | 'updated_at'>): Promise<Note> => {
     const response = await api.post<Note>('/notes', note);
     return response.data;
   },
-
-  // Buscar nota específica
+ 
   getNote: async (id: string): Promise<Note> => {
     const response = await api.get<Note>(`/notes/${id}`);
     return response.data;
   },
-
-  // Atualizar nota
+ 
   updateNote: async (id: string, note: Partial<Note>): Promise<Note> => {
     const response = await api.put<Note>(`/notes/${id}`, note);
     return response.data;
   },
-
-  // Deletar nota
+ 
   deleteNote: async (id: string): Promise<void> => {
     await api.delete(`/notes/${id}`);
   },

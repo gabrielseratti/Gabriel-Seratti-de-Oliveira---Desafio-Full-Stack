@@ -1,0 +1,25 @@
+@"
+# Prompts Utilizados Durante o Desenvolvimento
+
+## 1. Arquitetura e Stack Tecnológica
+"Preciso desenvolver uma aplicação full-stack com backend API RESTful e frontend moderno. Qual stack você recomenda considerando boas práticas, escalabilidade e facilidade de manutenção? Estou avaliando Laravel para o backend e React com TypeScript para o frontend."
+
+## 2. Implementação de API RESTful com Validação
+"Implemente um controller RESTful completo seguindo princípios REST, incluindo filtros por query parameters, paginação, validação de dados com FormRequests customizados e tratamento adequado de erros HTTP com mensagens personalizadas."
+
+## 3. Testes Automatizados e Qualidade de Código
+"Desenvolva uma suite completa de testes automatizados incluindo testes unitários do modelo e testes de integração da API, cobrindo casos de sucesso, validação de erros e edge cases, garantindo cobertura adequada."
+
+## 4. Containerização e DevOps
+"Configure Docker e Docker Compose para containerizar a aplicação Laravel (backend) e React (frontend), garantindo isolamento de ambientes, facilidade de deploy e reprodutibilidade do ambiente de desenvolvimento."
+
+## 5. Interface Profissional e Experiência do Usuário
+"Implemente uma interface seguindo design system específico, com componentes React reutilizáveis, TypeScript para type safety, feedback visual adequado (toasts, loading states, modais de confirmação), e funcionalidades de exportação de dados em múltiplos formatos (CSV, TXT, PDF)."
+
+---
+
+## Metodologia de Uso da IA
+
+A Inteligência Artificial foi utilizada como ferramenta de consultoria técnica e aceleração de desenvolvimento, sempre sob supervisão ativa e com total compreensão do código gerado.
+
+Todo código foi revisado, testado extensivamente e adaptado conforme necessidades específicas do projeto. A responsabilidade pela qualidade, funcionalidade e manutenibilidade do código final é integralmente minha. 
